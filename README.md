@@ -8,7 +8,6 @@ conda activate parl_minigrid
 pip install -r requirements
 pip install -e .
 ```
-* `parl_minigrid` and `parl_agent` should install this package
 
 # Citations
 ```
@@ -22,3 +21,33 @@ pip install -e .
 
 # License
 Apache-2.0 License
+
+
+# Referencces
+This project utilizes the following opensource projects.
+* `pyperplan`
+* `fastdownward`
+```
+@Misc{alkhazraji-et-al-zenodo2020,
+  author =       "Yusra Alkhazraji and Matthias Frorath and Markus Gr{\"u}tzner
+                  and Malte Helmert and Thomas Liebetraut and Robert Mattm{\"u}ller
+                  and Manuela Ortlieb and Jendrik Seipp and Tobias Springenberg and
+                  Philip Stahl and Jan W{\"u}lfing",
+  title =        "Pyperplan",
+  publisher =    "Zenodo",
+  year =         "2020",
+  doi =          "10.5281/zenodo.3700819",
+  url =          "https://doi.org/10.5281/zenodo.3700819",
+  howpublished = "\url{https://doi.org/10.5281/zenodo.3700819}"
+}
+
+@article{helmert2006fast,
+  title={The Fast Downward planning system.},
+  author={Helmert, Malte},
+  journal={Journal of Artificial Intelligence Research},
+  volume={26},
+  pages={191--246},
+  year={2006}
+}
+
+```
