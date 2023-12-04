@@ -62,6 +62,7 @@ def sas_literal_str_to_pddl_str(sas_literal: Text):
         fact_str = "(not " + fact_str + ")"
     return fact_str
 
+
 StripsOperator = namedtuple('StripsOperator', ['name', 'precondition', 'effect'])
 
 
@@ -157,3 +158,5 @@ def generate_pyperplan_task(domain_file: Text, problem_file: Text, project_reach
                 reachable_facts.add(sas_literal_str_to_pddl_str(sas_literal))
     pyperplan_task = ground_problem(domain_file, problem_file, reachable_facts)
     return pyperplan_task
+
+

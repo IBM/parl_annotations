@@ -1,15 +1,29 @@
-# parl_annotations
-* defines abstract class for planning annotation reinforcement learning.
+# parl_annotatations
+This repository offers base classes for annotation classes in parl codes.
 
-## Install
+## Related Repos
+we use `parl_agent`, `parl_benchmark`, `parl_annotations` together.
+* [parl_agents](https://github.com/IBM/parl_agents): Hierarchical RL agent codes 
+* [parl_minigrid](https://github.com/IBM/parl_minigrid): Add-on to the minigrid environemtns
+* adding different kinds of annotation to RL task, we extend `parl_annotations`
+* adding new annotated RL environments, we addd new `parl_benchmark` such as `parl_minigrid`
+  
+# Install
+* first create a conda environment for installing parl_annotations, parl_agents, parl_minigrid.
 ```
-conda create -n parl_minigrid python=3.7
-conda activate parl_minigrid
-pip install -r requirements
-pip install -e .
+$ conda create -n parl python=3.7
+```
+
+* clone this repository install the current repository. 
+  * two external libraries, pyperplan and downward_translate are stored under libs
+  * there was a minor modification made on two packages
+```
+$ pip install -r requirements.txt
+$ pip install -e .
 ```
 
 # Citations
+* 2021 ICAPS PRL Workshop paper
 ```
 @inproceedings{lee2021ai,
   title={AI Planning Annotation in Reinforcement Learning: Options and Beyond},
@@ -19,35 +33,12 @@ pip install -e .
 }
 ```
 
-# License
-Apache-2.0 License
-
-
-# Referencces
-This project utilizes the following opensource projects.
-* `pyperplan`
-* `fastdownward`
+* 2023 NEURIPS GenPlan Workshop paper
 ```
-@Misc{alkhazraji-et-al-zenodo2020,
-  author =       "Yusra Alkhazraji and Matthias Frorath and Markus Gr{\"u}tzner
-                  and Malte Helmert and Thomas Liebetraut and Robert Mattm{\"u}ller
-                  and Manuela Ortlieb and Jendrik Seipp and Tobias Springenberg and
-                  Philip Stahl and Jan W{\"u}lfing",
-  title =        "Pyperplan",
-  publisher =    "Zenodo",
-  year =         "2020",
-  doi =          "10.5281/zenodo.3700819",
-  url =          "https://doi.org/10.5281/zenodo.3700819",
-  howpublished = "\url{https://doi.org/10.5281/zenodo.3700819}"
+@inproceedings{lee2021ai,
+  title={Hierarchical Reinforcement Learning with AI Planning Models},
+  author={Lee, Junkyu and Katz, Michael and Agravante, Don Joven and Liu, Miao and Tasse, Geraud Nangue and Klinger, Tim and Sohrabi, Shirin},
+  booktitle={Generalization in Planning GenPlan Workshop at NEURIPS},
+  year={2023}
 }
-
-@article{helmert2006fast,
-  title={The Fast Downward planning system.},
-  author={Helmert, Malte},
-  journal={Journal of Artificial Intelligence Research},
-  volume={26},
-  pages={191--246},
-  year={2006}
-}
-
 ```
